@@ -4,38 +4,49 @@
 public class OddNumbers {
     public static void main(String[] args) {
 
-        int [] myarray = {6, 2, 3};
+        int [] myarray = {2, 2, 4, 8, 10};
 
         System.out.println(returnOddNumbers(myarray));
 
     }
 
-    public static int returnOddNumbers(int numbers []){
+    public static int returnOddNumbers(int numbers []) {
+        int f = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
+        while (f < numbers.length) {
 
-            if (numbers[i] %  2 == 0) {
+            for (int i = 0; i < numbers.length; i++) {
 
-                System.out.println("The number is even");
 
-                int [] myarray_of_evens = new int[10];
+                if (numbers[i] % 2 == 0) {
 
-                myarray_of_evens[i] = numbers[i];
+                    System.out.println("The number is even");
 
-                for (int j = 0; j < myarray_of_evens.length; j++) {
+                    int[] myarray_of_evens = new int[10];
 
-                    System.out.println(myarray_of_evens[i]);
-                }
+                    myarray_of_evens[i] = numbers[i];
 
-                return numbers[i];
+                    for (int j = 0; j < myarray_of_evens.length; j++) {
 
-            }else
-                System.out.println("The number is odd");
+                        System.out.println(myarray_of_evens[i]);
+                    }
+
+                    return numbers[i];
+
+                } else
+                    System.out.println("The number is odd");
                 return numbers[i];
             }
 
+            return 0;
+        }
+
+        f ++;
+
         return 0;
     }
+
+    //Second working version to try and workout how to move to the next item
 
     public static int returnOddNumbers1(int numbers []){
 
